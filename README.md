@@ -20,7 +20,7 @@
     ```
     or Try this installation
     ```bash
-    get https://pkg.jenkins.io/debian-stable/binary/jenkins_2.492.1_all.deb
+    wget https://pkg.jenkins.io/debian-stable/binary/jenkins_2.492.1_all.deb
     sudo dpkg -i jenkins_2.492.1_all.deb
     sudo apt --fix-broken install -y
     ```
@@ -38,4 +38,15 @@
         ```
     * Access the Jenkins dashboard at `http://<ec2-public-ip>:8080`.
     * Paste the password, install suggested plugins, and create an admin user.
+
+6. **Add Sonarqube Repository and Install:**
+    ```bash
+    sudo apt update && sudo apt install unzip -y
+    sudo adduser sonarqube
+    sonarqube-10.4.1.88267.zip
+    sudo mv sonarqube-10.4.1.88267 /opt/sonarqube
+    sudo chown -R sonarqube:sonarqube /opt/sonarqube
+    sudo su - sonarqube
+    /opt/sonarqube/bin/linux-x86-64/sonar.sh start
+    ```
 
