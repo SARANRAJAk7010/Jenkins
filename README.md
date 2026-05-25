@@ -24,6 +24,14 @@
     sudo dpkg -i jenkins_2.492.1_all.deb
     sudo apt --fix-broken install -y
     ```
+    or Try
+    ```bash
+    wget https://get.jenkins.io/debian-stable/jenkins_2.516.1_all.deb
+    sudo dpkg -i jenkins_2.516.1_all.deb
+    sudo apt --fix-broken install -y
+    sudo systemctl enable jenkins
+    sudo systemctl start jenkins
+    ```
 
 4.  **Start and Enable Jenkins Service:**
     ```bash
